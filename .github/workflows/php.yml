@@ -37,5 +37,4 @@ jobs:
 
     # - name: Run test suite
     #   run: composer run-script test
-    -name: Version PHP
-     run: php --version
+ 
