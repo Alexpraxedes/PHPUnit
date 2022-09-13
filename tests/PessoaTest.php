@@ -9,7 +9,7 @@ class PessoaTest extends TestCase{
     {
         $pessoa = new Pessoa;
         $this->expectOutputString('João');
-        $pessoa->nome('João');
+        $pessoa->nome('Maria');
     }
 
 }
