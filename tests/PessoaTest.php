@@ -5,7 +5,7 @@ use PHPUnit\Framework\TestCase;
 
 class PessoaTest extends TestCase{
 
-    public function testSeNomeDaPessoaEString()
+    public function testSeNomeDaPessoaEStringComMesmaSaida()
     {
         $pessoa = new Pessoa;
         $this->expectOutputString('João');

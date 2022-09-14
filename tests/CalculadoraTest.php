@@ -5,6 +5,16 @@ use PHPUnit\Framework\TestCase;
 
 class CalculadoraTest extends TestCase{
 
+    public static function setUpBeforeClass(): void
+    {
+        echo "SetUp executado antes dos métodos da classe ";
+    }
+
+    public static function tearDownAfterClass(): void
+    {   
+        echo "TearDown executado depois dos métodos da classe ";
+    }
+
     public function testDaFuncaoSomar()
     {
         $calculadora = new Calculadora;
