@@ -17,16 +17,20 @@ class CalculadoraTest extends TestCase{
 
     public function testDaFuncaoSomar()
     {
+        $status = 'inativo';
+        if($status != 'ativo'){
+            $this->markTestSkipped('O teste está com o status inativo');
+        }
         $calculadora = new Calculadora;
         $this->assertEquals('9',$calculadora->somar(5,4));
     }
 
-    // public function testExceptionCalculoSomaFaltandoArgumentos()
-    // {
-    //     $calculadora = new Calculadora;
-    //     $this->assertEquals(5,$calculadora->somar());
-    //     $this->expectException(\ArgumentCountError::class);
-    // }
+    public function testExceptionCalculoSomaFaltandoArgumentos()
+    {
+        $calculadora = new Calculadora;
+        $this->assertEquals(5,$calculadora->somar());
+        $this->expectException(\ArgumentCountError::class);
+    }
     
 
 }
