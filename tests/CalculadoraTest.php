@@ -5,17 +5,21 @@ use PHPUnit\Framework\TestCase;
 
 class CalculadoraTest extends TestCase{
 
-    public function testCalcularSoma()
+    public function testDaFuncaoSomar()
     {
         $calculadora = new Calculadora;
         $this->assertEquals('9',$calculadora->somar(5,4));
     }
 
-    // public function testExceptionCalcularSoma()
-    // {
-    //     $calculadora = new Calculadora;
-    //     $this->assertEquals(5,$calculadora->somar());
-    //     $this->expectException(\ArgumentCountError::class);
-    // }
+     /**
+    * @requires extension mysqli
+    */
+    public function testExceptionCalculoSomaFaltandoArgumentos()
+    {
+        $calculadora = new Calculadora;
+        $this->assertEquals(5,$calculadora->somar());
+        $this->expectException(\ArgumentCountError::class);
+    }
+    
 
 }
