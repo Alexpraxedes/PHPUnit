@@ -11,9 +11,6 @@ class CalculadoraTest extends TestCase{
         $this->assertEquals('9',$calculadora->somar(5,4));
     }
 
-     /**
-    * @requires extension mysqli
-    */
     public function testExceptionCalculoSomaFaltandoArgumentos()
     {
         $calculadora = new Calculadora;
